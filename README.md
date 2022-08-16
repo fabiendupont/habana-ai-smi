@@ -18,9 +18,9 @@ export RHEL_VERSION="8.6"
 
 ```shell
 podman build \
-    --build-arg ARCH=x86_64 \
+    --build-arg ARCH=${ARCH} \
     --build-arg BASE_DIGEST=${BASE_DIGEST} \
-    --build-arg HABANA_VERSION=${HABANAVERSION} \
+    --build-arg HABANA_VERSION=${HABANA_VERSION} \
     --build-arg RHEL_VERSION=${RHEL_VERSION} \
     --tag ghcr.io/fabiendupont/habana-ai-smi:${HABANA_VERSION} \
     --file Dockerfile .
